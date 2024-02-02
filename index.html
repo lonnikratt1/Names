@@ -25,22 +25,6 @@
   <label for="numberofdice">If your name is on here then ur cool! </label>
 
   <label for="dicesides">If ur name isnt on here then ur not cool </label>
-
-  <script>
-    function rollDice() {
-      var numberofdice = document.getElementById('numberofdice').value;
-      var dicesides = document.getElementById('dicesides').value;
-
-      if (parseInt(dicesides) >= 1) {
-        var results = "";
-        for (var i = 0; i < parseInt(numberofdice); i++) {
-          var diceOutput = Math.floor(Math.random() * parseInt(dicesides)) + 1;
-          results += "You rolled a " + diceOutput + "<br>";
-        }
-
-        document.getElementById('diceResults').innerHTML = results;
-      }
-    }
-  </script>
+<backgroud>color: #912415</backgroud>
 </body>
 </html>

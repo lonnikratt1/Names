@@ -1,2 +1,51 @@
-<!doctype/>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the list of names!</h1>
+
+  <label for="numberofdice">If your name is on here then ur cool! </label>
+  <input type="number" id="numberofdice" min="1" value=""><br>
+
+  <label for="dicesides">If ur name isnt on here then ur not cool </label>
+  <input type="number" id="dicesides" min="1" value=""><br>
+
+  <button onclick="rollDice()">Roll Dice</button>
+
+  <div id="diceResults"></div>
+
+  <script>
+    function rollDice() {
+      var numberofdice = document.getElementById('numberofdice').value;
+      var dicesides = document.getElementById('dicesides').value;
+
+      if (parseInt(dicesides) >= 1) {
+        var results = "";
+        for (var i = 0; i < parseInt(numberofdice); i++) {
+          var diceOutput = Math.floor(Math.random() * parseInt(dicesides)) + 1;
+          results += "You rolled a " + diceOutput + "<br>";
+        }
+
+        document.getElementById('diceResults').innerHTML = results;
+      }
+    }
+  </script>
+</body>
+</html>

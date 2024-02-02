@@ -9,6 +9,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 20px;
+      color: #60edfc
     }
 
     button {
@@ -22,14 +23,8 @@
   <h1>Welcome to the list of names!</h1>
 
   <label for="numberofdice">If your name is on here then ur cool! </label>
-  <input type="number" id="numberofdice" min="1" value=""><br>
 
   <label for="dicesides">If ur name isnt on here then ur not cool </label>
-  <input type="number" id="dicesides" min="1" value=""><br>
-
-  <button onclick="rollDice()">Roll Dice</button>
-
-  <div id="diceResults"></div>
 
   <script>
     function rollDice() {
